@@ -1,0 +1,29 @@
+html>
+    <head><title>Blog post</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1><a href="{% url 'home' %}"><img src="/static/article.png"/></a></h1>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <form class="logout-link" action="{% url 'accounts:logout'%}" method="post">
+                        {%csrf_token%}
+                        <button type="submit">Logout</button>
+                        </form>
+                        <a href="{% url 'articles:create' %}"><button>Create a New Article</button></a>
+                    </li>
+                    {% else %}
+                    <li><a href="{% url 'accounts:login'%}"><button>LogIn</button></a></li>
+                    <li><a href="{% url 'accounts:signup'%}"><button>SignUp</button></a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {%block content%}
+            {% endblock %}
+        </div>
+    </body>
+    </html>

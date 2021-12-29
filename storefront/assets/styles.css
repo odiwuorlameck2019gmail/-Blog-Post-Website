@@ -1,0 +1,99 @@
+body{
+    background:blue;
+    background-image: url(/static/stars.jpg);
+}
+body *{
+    font-family:Ubuntu;
+}
+h1,h2,h3,h4,h5{
+    font-weight:normal;
+    margin:0;
+}
+
+a,a:hover,a:visited{
+    color:rgb(38, 0, 255);
+    text-decoration:none;
+}
+
+.article{
+    background:scroll;
+    background-color: yellow;
+
+}
+
+
+form {
+    color:blue;
+}
+
+
+.wrapper{
+    max-width:961 px;
+    margin: 0 auto;
+}
+
+div.wrapper h1{
+    text-align:center;
+    color:red;
+    grid-template-columns: 1fr 1fr;
+    padding:20px 0;
+}
+
+
+header{
+    display:grid;
+}
+nav{
+    justify-self: end;
+}
+nav li{
+    display:inline-block;
+    margin-left: 30px;
+    
+}
+
+
+
+
+.articles{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:25px;
+
+}
+
+button{
+    width: 200px;
+    height:80px;
+    background-color: blue;
+    color:yellow;
+    font-size: large;
+}
+
+.site-form{
+    margin-top:60px;
+    border:1px solid blue ;
+    padding: 20px;
+}
+
+.site-form input,.site-form textarea{
+    display:block;
+    margin:20px 0 0 0;
+    padding:10px;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    border:1px solid red;
+    color:red;
+}
+
+.site-form input[type='submit']{
+    width: 200px;
+    height:80px;
+    background-color: blue;
+    color:yellow;
+    font-size: large;
+}
+
